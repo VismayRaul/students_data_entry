@@ -10,7 +10,7 @@ student_inp={}
 stud={}
 final={}
 for i in range(a):
-    student_inp["name"]=input("Enter name : ")
+    student_inp=input("Enter name : ")
     phy=input("Enter physics marks : ")
     math=input("Enter maths marks : ")
     eng=input("Enter english marks : ")
@@ -18,13 +18,16 @@ for i in range(a):
     avg=0
     for arr in x:
         z=[]
+        info={}
         avg = int(arr)+avg
-    z.append(avg/3)
+        percent=avg/3
+        info['percentage']=percent
     x.sort()
     large=x[len(x)-1]
-    z.append(large)
-    stud[student_inp["name"]] = x
-    final[student_inp["name"]] = z
+    info['top_sub_marks']=large
+    z.append(info)
+    stud[student_inp] = x
+    final[student_inp] = z
 print(stud)
 print(final)
 checkInp=input('Enter name of student whose info is required : ')
