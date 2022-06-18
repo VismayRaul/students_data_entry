@@ -10,20 +10,28 @@ student_inp={}
 stud={}
 final={}
 for i in range(a):
+    x=[]
+    sub={}
     student_inp=input("Enter name : ")
-    phy=input("Enter physics marks : ")
-    math=input("Enter maths marks : ")
-    eng=input("Enter english marks : ")
-    x=[phy,math,eng]
+    sub['phy']=input("Enter physics marks : ")
+    sub['math']=input("Enter maths marks : ")
+    sub['eng']=input("Enter english marks : ")
+    x.append(sub)
     avg=0
     for arr in x:
-        z=[]
-        info={}
-        avg = int(arr)+avg
-        percent=avg/3
-        info['percentage']=percent
-    x.sort()
-    large=x[len(x)-1]
+        arr1=arr.values()
+        marks_list=[]
+        for arr2 in arr1:
+            marks_list.append(arr2)
+            # print(arr2)
+            z=[]
+            info={}
+            avg = int(arr2)+avg
+            percent=avg/3
+            info['percentage']=percent
+    # z.append(info['average'])
+    marks_list.sort()
+    large=marks_list[len(marks_list)-1]
     info['top_sub_marks']=large
     z.append(info)
     stud[student_inp] = x
