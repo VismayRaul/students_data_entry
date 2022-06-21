@@ -23,13 +23,11 @@ for i in range(a):
         marks_list=[]
         for arr2 in arr1:
             marks_list.append(arr2)
-            # print(arr2)
             z=[]
             info={}
             avg = int(arr2)+avg
             percent=avg/3
             info['percentage']=percent
-    # z.append(info['average'])
     marks_list.sort()
     large=marks_list[len(marks_list)-1]
     info['top_sub_marks']=large
